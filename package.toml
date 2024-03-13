@@ -1,5 +1,5 @@
 name = "compress"
-version = "1.2.0"
+version = "v1.2.1"
 authors = ["weiwenhao 1101140857@qq.com"]
 description = "compress gzip"
 license = "MIT"
