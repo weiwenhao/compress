@@ -110,10 +110,10 @@ fn encode(string workdir, string tgz_path, [string] sources) {
 
                 // 目录也可以被打开，但是不能进行 read
                 var fd = syscall.open(libc_string_new(raw), syscall.O_RDONLY, 0666)
-                var len = syscall.read(fd, buf) catch err {}
+                var len = syscall.read(fd, buf.ref(), buf.len()) catch err {}
                 for len > 0 {
                      archive_write_data(a, buf.ref(), len)
-                     len = syscall.read(fd, buf)
+                     len = syscall.read(fd, buf.ref(), buf.len())
                 }
                 syscall.close(fd)
             }
