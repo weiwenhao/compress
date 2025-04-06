@@ -70,6 +70,15 @@ fn write_disk_new():archive_t
 #linkid archive_write_disk_set_options
 fn write_disk_set_options(archive_t ext, i32 flags):i32
 
+#linkid archive_write_disk_set_standard_lookup
+fn write_disk_set_standard_lookup(archive_t ext):i32
+
+#linkid archive_read_support_format_all
+fn read_support_format_all(archive_t a):i32
+
+#linkid archive_read_support_filter_all
+fn read_support_filter_all(archive_t a):i32
+
 #linkid archive_read_support_filter_gzip
 fn read_support_filter_gzip(archive_t a):i32
 
